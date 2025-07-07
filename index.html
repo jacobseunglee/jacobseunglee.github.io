@@ -480,11 +480,9 @@
     </div>
 
     <script>
-        // Check for saved theme preference or default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
+        const currentTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', currentTheme);
         
-        // Update icon based on current theme
         function updateThemeIcon() {
             const themeIcon = document.getElementById('theme-icon');
             const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -500,11 +498,9 @@
                 `;
             }
         }
-        
-        // Initialize icon
+
         updateThemeIcon();
         
-        // Toggle theme function
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
